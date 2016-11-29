@@ -358,7 +358,7 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
         }
     
 }
-
+.m_lun_box { display: none;}
 //开始媒体查询
 @media screen and (max-width: 1080px) {
      html {
@@ -383,9 +383,26 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
  .lun_list_box .lun_list .bxslider li .btn_bofang .iconfont { font-size: .3rem;}
  .lun_list_box .lun_list { width: 92%; left: 4%; right: 4%;}
 .center_spc { text-align: left; width: 92%; margin-left: 4%; text-align: center;}
+.services_box .center_spc  { text-align: left;}
  .designer_box .desi_list { width: 100%;}
  .banner_bc { margin-top: 0 !important;}
-  
+  .m_lun_box { float: left; width: 82%; display: block; margin-left: 9%; position: relative;
+//.zefang_m { position: absolute; width: 10%; top: 3%; height: 94%; background: #000000;@include opacitya(.5); z-index: 999; }
+//.ze_left { left: -13.1%;}
+//.ze_right { right: -13.1%;}
+  .bx-viewport { overflow: visible !important;}
+    .m_lun li { 
+         img { float: left; width: 94%; margin:3%; }
+    } 
+  }
+  .img_list,.banner_nav ul li { display: none;}
+  .banner_nav ul li:first-child { display: block;}
+  .banner_nav ul li .nav_btn {padding: 5px 18px;}
+  .mesg_list_box .right_mesga .mesg_box .mesg_box_box .r_mb {
+    position: inherit;
+    display: block;
+    text-align: left;
+}
 }
 
 @media screen and (max-width: 540px) {

@@ -875,6 +875,9 @@ footer {
       width: 100%;
       margin-bottom: .4rem; }
 
+.m_lun_box {
+  display: none; }
+
 @media screen and (max-width: 1080px) {
   html {
     font-size: 48px; }
@@ -929,11 +932,41 @@ footer {
     margin-left: 4%;
     text-align: center; }
 
+  .services_box .center_spc {
+    text-align: left; }
+
   .designer_box .desi_list {
     width: 100%; }
 
   .banner_bc {
-    margin-top: 0 !important; } }
+    margin-top: 0 !important; }
+
+  .m_lun_box {
+    float: left;
+    width: 82%;
+    display: block;
+    margin-left: 9%;
+    position: relative; }
+    .m_lun_box .bx-viewport {
+      overflow: visible !important; }
+    .m_lun_box .m_lun li img {
+      float: left;
+      width: 94%;
+      margin: 3%; }
+
+  .img_list, .banner_nav ul li {
+    display: none; }
+
+  .banner_nav ul li:first-child {
+    display: block; }
+
+  .banner_nav ul li .nav_btn {
+    padding: 5px 18px; }
+
+  .mesg_list_box .right_mesga .mesg_box .mesg_box_box .r_mb {
+    position: inherit;
+    display: block;
+    text-align: left; } }
 @media screen and (max-width: 540px) {
   html {
     font-size: 30px; } }
