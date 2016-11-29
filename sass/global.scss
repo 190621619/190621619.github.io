@@ -412,7 +412,7 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
              .right_here { margin-right:column-width(80,1680);}
              .bac_ff { background: #FFFFFF; color: #333333;}
              .bac_cc { background: #000000;}
-             .top_titile {position:absolute;top: .63rem;left: -260%; width:150%; line-height: 0;font-size: .32rem; color: #333333;
+             .top_titile {position:absolute;top: .63rem; left: -260%; width:200%; line-height: 0;font-size: .32rem; color: #333333;
                 span{ display: inline; text-align: center; line-height: .64rem; float: left;}             
              }
              .iconfont{ font-size: .64rem; color: #FF4E38; margin-bottom: .8rem; margin-right: .4rem;}
@@ -458,7 +458,7 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
 }
 .mesg_list_box .img_box { display: block; margin:0 auto .4rem auto;}
 .about_us table {margin: 6.7rem auto 1.4rem auto; width: 92%;}
-.about_mesg .logo_ad_C { position: absolute;  width:column-width(500,1680); top: .4rem; left: 50%; margin-left: column-width(-250,1680);}
+.about_mesg .logo_ad_C { position: absolute;  width:column-width(100,750); top: .4rem; left: 50%; margin-left: column-width(-50,750);}
 .index_boot .boot_center .logo_boxxx { display: inline-block; position: relative; left: 0;    top: 0.43rem;}
 .index_boot .icon-ewm { display :inline-block; text-indent: 0; position: initial;  margin-left: .4rem;}
 .index_boot .boot_center { text-align: center;margin: 1.2rem auto 0.4rem auto;}
@@ -468,9 +468,9 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
 .lun_list_box .lun_list .bxslider li .vedio_boot_mesg .vbm_top { margin-top: .1rem; margin-bottom: .1rem;}
 .lun_list_box .lun_list .bxslider_box .bx-default-pager { bottom: .7rem;}
 
- .plpelne_box .plp_nacb .typeb_f { width: column-width(500,1680) !important;
+ .plpelne_box .plp_nacb .typeb_f { width: column-width(100,750) !important; left: 50% !important;
  i { display: none;}
-    .top_titile { left: 0 !important; top: -1.3rem;}
+    .top_titile { top: -1.3rem;}
  }
  
  .plpelne_box .plp_nacb .typeb_e i { display: inline-block;}

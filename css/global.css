@@ -1012,7 +1012,7 @@ footer {
         position: absolute;
         top: .63rem;
         left: -260%;
-        width: 150%;
+        width: 200%;
         line-height: 0;
         font-size: .32rem;
         color: #333333; }
@@ -1118,10 +1118,10 @@ footer {
 
   .about_mesg .logo_ad_C {
     position: absolute;
-    width: 29.7619%;
+    width: 13.33333%;
     top: .4rem;
     left: 50%;
-    margin-left: -14.88095%; }
+    margin-left: -6.66667%; }
 
   .index_boot .boot_center .logo_boxxx {
     display: inline-block;
@@ -1158,11 +1158,11 @@ footer {
     bottom: .7rem; }
 
   .plpelne_box .plp_nacb .typeb_f {
-    width: 29.7619% !important; }
+    width: 13.33333% !important;
+    left: 50% !important; }
     .plpelne_box .plp_nacb .typeb_f i {
       display: none; }
     .plpelne_box .plp_nacb .typeb_f .top_titile {
-      left: 0 !important;
       top: -1.3rem; }
 
   .plpelne_box .plp_nacb .typeb_e i {
