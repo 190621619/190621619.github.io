@@ -1010,17 +1010,18 @@ footer {
         background: #000000; }
       .plpelne_box .plp_nacb .top_titile {
         position: absolute;
-        top: .63rem;
+        top: 0;
+        height: 100%;
         left: -260%;
         width: 200%;
+        display: table;
         line-height: 0;
         font-size: .32rem;
         color: #333333; }
         .plpelne_box .plp_nacb .top_titile span {
-          display: inline;
           text-align: center;
-          line-height: .64rem;
-          float: left; }
+          vertical-align: middle;
+          display: table-cell; }
       .plpelne_box .plp_nacb .iconfont {
         font-size: .64rem;
         color: #FF4E38;
@@ -1163,7 +1164,7 @@ footer {
     .plpelne_box .plp_nacb .typeb_f i {
       display: none; }
     .plpelne_box .plp_nacb .typeb_f .top_titile {
-      top: -1.3rem; }
+      top: -.8rem; }
 
   .plpelne_box .plp_nacb .typeb_e i {
     display: inline-block; } }
