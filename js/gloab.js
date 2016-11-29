@@ -2,6 +2,7 @@ var gettt = true;
 var index_of=0;
 $(function() {
 	lun_nav();
+	auto_height();
 //	setInterval(function(){
 //		index_of++;
 //		if(index_of>2){
@@ -24,6 +25,7 @@ $(function() {
 		setTimeout(function(){
 			auto_height();
 			if($("#gloab").hasClass("pc")){
+				
 			$("#banner_vedio").attr("autoplay","autoplay");
                         $("#banner_vedio").get(0).play();
 		}
@@ -31,19 +33,6 @@ $(function() {
 
 
 
-	var gett = 0;
-	var myVideo = document.getElementsByTagName('video')[0];
-	$(".video_box").on("click", function() {
-		if (gett == 0) {
-			$(".bg_bc,.btn_bf").hide();
-			myVideo.play();
-			gett = 1;
-		} else {
-
-			gett = 0;
-		}
-
-	})
 		$(".bxslider li").on("click",function(){
 			var index=$(this).index();
 			var _this=$(this);
@@ -59,7 +48,7 @@ $(function() {
 			}
 			
 		});
-
+})
 	window.onresize = function() {
 		auto_height();
 	}
@@ -72,17 +61,16 @@ $(function() {
 	function auto_height() {
 		jiance();
 		var vedio_h=parseInt($(".bxslider").width())*.58;
-		$(".bxslider").height(vedio_h);
 		var heightttt=$(".nacb_typea").width();
 		var herhe=$(".img_box").height();
-		$(".nacb_typea").css("line-height",heightttt+"px");
 		var window_height = $(window).height();
 		var window_heighta = document.body.offsetHeight;
 		var banner_height = $(".banner_center").height();
 		var nav_here = $(".center_nav").height();
 		var body_width = $(window).width();
 		$(".mesg_box").height(herhe);
-		if (body_width > 580) {
+		$(".bxslider").height(vedio_h);
+		$(".nacb_typea").css("line-height",heightttt+"px");
 			var shengyu = (window_height - banner_height - nav_here);
 			if (shengyu > 0) {
 				//		$(".banner .language").css("margin-top",-shengyu);
@@ -100,10 +88,7 @@ $(function() {
 			var bcc_h = $(".banner_bc").height();
 			$(".banner_bc").css("margin-top", -(bcc_h - bner) / 2);
 			$("#banner_vedio").css("margin-top", -(vedio_h - bner) / 2);
-		} else {
-			var widtha = $(".vedio_box").width();
-			$(".vedio_box").css("height", 0.5625 * widtha);
-		}
+		
 	}
 
 	function jiance() {
@@ -144,7 +129,7 @@ $(function() {
 		}
 	}
 	
-})
+
 
 
 function lun_nav(){
@@ -169,16 +154,4 @@ function lun_nav(){
 function btn_click(index){
 	$(".bxslider li:eq("+index+"),.btn_nav .van_btn:eq("+index+")").addClass("active").removeClass("activea").siblings().addClass("activea").removeClass("active");
 }
-//
-//$(".int_list").on("mouseenter",function(){
-//	var height=$(this).find(".boot_mesg_box").height()+30;
-//	$(this).find(".list_boot_mesg").stop(true).animate({paddingBottom:height},300,"swing",function(){
-//		$(this).find(".iconfont").addClass("icon-jian").removeClass("icon-jia");
-//	});
-//	
-//}).on("mouseleave",function(){
-//	$(this).find(".list_boot_mesg").stop(true).animate({paddingBottom:0},300,"swing",function(){
-//		$(this).find(".iconfont").addClass("icon-jia").removeClass("icon-jian");
-//	});
-//	
-//});
+

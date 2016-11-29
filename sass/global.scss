@@ -382,7 +382,9 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
  .lun_list_box .lun_list .bxslider li .btn_bofang{ width: 1rem; height: 1rem; line-height: 1rem;}
  .lun_list_box .lun_list .bxslider li .btn_bofang .iconfont { font-size: .3rem;}
  .lun_list_box .lun_list { width: 92%; left: 4%; right: 4%;}
- .services_box .center_spc { text-align: left;}
+ .services_box .center_spc { text-align: left; width: 92%; margin-left: 4%;}
+ .designer_box .desi_list { width: 100%;}
+ .banner_bc { margin-top: 0 !important;}
   
 }
 //浏览器兼容

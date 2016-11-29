@@ -924,7 +924,15 @@ footer {
     right: 4%; }
 
   .services_box .center_spc {
-    text-align: left; } }
+    text-align: left;
+    width: 92%;
+    margin-left: 4%; }
+
+  .designer_box .desi_list {
+    width: 100%; }
+
+  .banner_bc {
+    margin-top: 0 !important; } }
 @-moz-document url-prefix() {
   .mesg_box_box .r_mb {
     margin-top: .4rem; } }
