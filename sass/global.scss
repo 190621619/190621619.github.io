@@ -178,15 +178,26 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
               &.center span { color: #FF4E38;}
 }
 .lun_list_box { background: #F2F2F2; float: left; width: 100%;
-.lun_list {float: left; position: relative;width: 80%;left: 10%;right: 10%;overflow: hidden; margin-top: 1.6rem; margin-bottom: 1.6rem;
-    .bxslider { position: relative; left:0 ; right: 0; height: 100%; margin-top: .8rem;
+.lun_list {float: left; position: relative;width: 80%;left: 10%;right: 10%; margin-top: 1.6rem; margin-bottom: 1.6rem;
+.bxslider_box {  margin-top: .8rem;
+    .bx-default-pager { text-align: center; margin-top: .4rem; position: absolute; bottom: .2rem; right: .4rem;
+        .bx-pager-item { display: inline-block; cursor: pointer; width:30px; height: 8px; background: #585a5a; margin-right: 10px;overflow: hidden;
+            a { float: left; width: 100%; height: 100%;}
+        }
+        .bx-pager-item:last-child { margin-right: 0;}
+        .bx-pager-item.hyeee { background: #FF4E38;}
+    }
+}
+.bx-wrapper,.bx-viewport { height: 100% !important;}
+    .bxslider { position: relative; left:0 ; right: 0; width: 724% !important;
             li,li img { float: left; width: 100%;}
-            li {position: absolute;  left: 0; top: 0; @include opacitya(0); height: 100%; z-index: 9;
+            li {position: absolute;  left: 0; top: 0; @include opacitya(0); height: 100%; z-index: 9; overflow: hidden; margin-right: .5%;
+            &:last-child { margin-right: 0px;}
                  .btn_bofang { width: 2rem; height: 2rem;line-height: 2rem; cursor: pointer; overflow: hidden; border-radius: 1.2rem; position: absolute; text-align: center; z-index: 9; left: 0; top: 0; right: 0; bottom: 0; margin: auto;
                             .bac_o { position: absolute; width: 100%; height: 100%; z-index: 8; background: #000000; @include opacitya(.5);}
                             .iconfont {color: #FFFFFF; font-size:.6rem ; position: relative; z-index: 9;}
                  }
-                .banner_bcaaa {    position: absolute;
+                .banner_bcaaa {   float: left; width: 100%;
                     background:transparent url('../img/shipin.jpg') 50% 50% no-repeat;
                     //下面就是background-size，每种浏览器都写一个配置
                     -webkit-background-size:cover;
@@ -194,8 +205,8 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
                     -o-background-size:cover;
                     background-size:cover;
                     top: 0;
-                    height: 100%;}
-                  .vedio_boot_mesg { position: absolute; left: 0; bottom: 0; width: 100%; z-index: 9;
+                    }
+                  .vedio_boot_mesg { position: absolute; left: 0; bottom: -1px; width: 100%; z-index: 9;
                     &::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #FFFFFF;@include opacitya(.9); z-index: -1;}
                     >div { margin-left: column-width(30,1680);}
                     .vbm_top { margin-top: .3rem; margin-bottom: .1rem;}
@@ -284,7 +295,7 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
             }
            
         }
-        .plp_nacb { float: left; width: 100%; position: relative; margin-top: 4rem; padding-bottom: 1.6rem;
+        .plp_nacb { float: left; width: 100%; position: relative; margin-top: 5rem; margin-bottom: 1.6rem;
             .center_xian { position: absolute; height: 4px; width: 100%; left: 0; margin-top:column-width(50,1680); top: -2px; background: #FFFFFF; z-index: 1;}
             .nacb_typea {float: left; position: relative; z-index: 2; width:column-width(100,1680); color: #FFFFFF; line-height: 2rem; height: 0; text-align: center;  padding-bottom: column-width(100,1680); border-radius: 50%; background: #FF4E38; margin-left:column-width(80,1680) ;}
              .nacb_typeb {position: absolute; z-index: 2; text-align: center;}
@@ -292,12 +303,14 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
              .typeb_b { left: column-width(465,1680);}
              .typeb_c { left: column-width(640,1680);}
              .typeb_d { left: column-width(824,1680);}
-             .typeb_e { right: column-width(410,1680);}
+             .typeb_e { right: column-width(410,1680);
+                    i { display: block;}
+             }
              .typeb_f { right: 10%; width:column-width(100,1680); }
              .right_here { margin-right:column-width(80,1680);}
              .bac_ff { background: #FFFFFF; color: #333333;}
              .bac_cc { background: #000000;}
-             .top_titile {position:absolute;top: -100px;left: -25%; width:150%; line-height: 0;font-size: .32rem; color: #333333;
+             .top_titile {position:absolute;top: -2.2rem;left: -25%; width:150%; line-height: 0;font-size: .32rem; color: #333333;
                 span{ display: block; text-align: center;}             
              }
              .iconfont{ font-size: .64rem; color: #FF4E38; margin-bottom: .8rem;}
@@ -305,7 +318,7 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
         
         }
 }
-.mesg_list_box { float: left; width: 100%; position: relative; overflow: hidden; margin: 1.6rem auto; text-align: center;
+.mesg_list_box{ float: left; width: 100%; position: relative; overflow: hidden; margin: 1.6rem auto; text-align: center;
     .img_box {width:column-width(300,1680); overflow: hidden; height:column-width(300,1680); border-radius: column-width(150,1680); display: inline-block;
          img {     width: 100%;
                     float: left;
@@ -333,16 +346,16 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
     table { position: relative;  left: 0; margin: 1.4rem auto 2.4rem auto; text-align: left;  line-height: 1.5;}
 }
 .index_boot { float: left; width: 100%; text-align: center; background: #333333;  color: #FFFFFF;
-        >div { display: inline-block; position: relative;}
         .icon-logo01 { color: #FF4E38;}
         .icon-logo- { position: absolute; left: 0; top: 0;}
-        .icon-ewm01 {border-right: 3px solid #FFFFFF; font-size: 1.4rem !important; top: .4rem;
-    box-sizing: border-box;
-    color: #333333;
-    border-left: 3px solid #FFFFFF;
-    background: #FFFFFF;}
+        .icon-ewm {border-right: 3px solid #FFFFFF; font-size: 1.2rem !important; top: .7rem; position: absolute; text-indent: 0;right: 24%;
+        box-sizing: border-box;
+        color: #333333;
+        border-left: 3px solid #FFFFFF;
+        background: #FFFFFF;}
         .iconfont { font-size: 2rem;}
-     .boot_center {  text-align: left; text-indent: .7rem; margin: 1.2rem .6rem 2rem .6rem;
+     .boot_center {  text-align: center; text-indent: .7rem; margin: 1.2rem .6rem 2rem .6rem; position: relative;
+     .logo_boxxx { position: absolute; text-indent: 0; top: .4rem; left: 24%;}
     .center_top { margin-bottom: .8rem; text-indent: 0;
         span:nth-child(2) { margin: 0 .8rem;}
         a { color: #FFFFFF;
@@ -365,12 +378,48 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
        font-size: 48px;
     }
     .plpelne_box { font-size: .24rem;}
-    .plpelne_box .plp_nacb .nacb_typeb { top: -10px;}
+       .about_mesg .logo_ad_C { left: 3%;}
+       .lun_list_box .lun_list .bxslider li .btn_bofang{ width: 1.4rem; height: 1.4rem; line-height: 1.4rem;}
+ .lun_list_box .lun_list .bxslider li .btn_bofang .iconfont { font-size: .4rem;}
 }
 @media screen and (max-width: 825px) {
      html {
        font-size: 42px;
     }
+    
+    .plpelne_box { float: left; width: 100%; position: relative;padding-top: 1.6rem; background: #f2f2f2;
+        .plp_naca{ text-align:center; position: relative; margin-top: 1.6rem;
+            >div { 
+                >span { display: block;text-align: center; font-size: .32rem;}
+            }
+           
+        }
+     .plp_nacb { float: left; width: 100%; position: relative; margin-top: 1rem;overflow: hidden; margin-bottom: 1.6rem;
+            >span {display: block;float: initial; position: relative !important;text-align: center !important; left: 50%; margin-left:column-width(-50,750) !important; float:initial !important;
+                &::after { content: ""; display: block; clear: both;}
+            }
+     
+            .center_xian { position: absolute; height: 100%; width: 4px; left: 50%; margin-left:-2px; top: 0; background: #FFFFFF; z-index: 1;}
+            .nacb_typea {float: left; position: relative; z-index: 2; width:column-width(100,750); color: #FFFFFF; line-height: 2rem; height: 0; text-align: center;  padding-bottom: column-width(100,750); border-radius: 50%; background: #FF4E38; margin-left:column-width(80,1680) ;}
+             .nacb_typeb {position: absolute; z-index: 2; text-align: center; padding: .4rem 0; left: 8em !important; right: initial !important;}
+          .typeb_a,.typeb_e {padding: 1rem 0;}
+//           .typeb_b { left: column-width(465,1680);}
+//           .typeb_c { left: column-width(640,1680);}
+//           .typeb_d { left: column-width(824,1680);}
+//           .typeb_e { right: column-width(410,1680);}
+//           .typeb_f { right: 10%; width:column-width(100,1680); }
+              .m_margin { margin-top: 1.2rem;}
+             .right_here { margin-right:column-width(80,1680);}
+             .bac_ff { background: #FFFFFF; color: #333333;}
+             .bac_cc { background: #000000;}
+             .top_titile {position:absolute;top: .63rem;left: -260%; width:150%; line-height: 0;font-size: .32rem; color: #333333;
+                span{ display: inline; text-align: center; line-height: .64rem; float: left;}             
+             }
+             .iconfont{ font-size: .64rem; color: #FF4E38; margin-bottom: .8rem; margin-right: .4rem;}
+          
+        
+        }
+        }
     .video_deside { display: none !important;}
     .introduce .int_list { width: 64%;  margin-left: 18%; margin-right: 18%; overflow: hidden; margin-bottom: .8rem;
         &:last-child { margin-bottom: 0 !important;}
@@ -379,9 +428,9 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
             .boot_mesg_box {position:static; margin-bottom: .4rem; padding-bottom: 0; width: 92%; margin-left: 4%;}
         }
     }
- .lun_list_box .lun_list .bxslider li .btn_bofang{ width: 1rem; height: 1rem; line-height: 1rem;}
+ .lun_list_box .lun_list .bxslider li .btn_bofang{ width: 1.2rem; height: 1.2rem; line-height: 1.2rem;}
  .lun_list_box .lun_list .bxslider li .btn_bofang .iconfont { font-size: .3rem;}
- .lun_list_box .lun_list { width: 92%; left: 4%; right: 4%;}
+ .lun_list_box .lun_list { width: 88%; left: 6%; right: 6%;}
 .center_spc { text-align: left; width: 92%; margin-left: 4%; text-align: center;}
 .services_box .center_spc  { text-align: left;}
  .designer_box .desi_list { width: 100%;}
@@ -403,12 +452,43 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
     display: block;
     text-align: left;
 }
+.mesg_list_box .right_mesga {
+    margin-left: 0.2rem;
+    text-align: left;
 }
+.mesg_list_box .img_box { display: block; margin:0 auto .4rem auto;}
+.about_us table {margin: 6.7rem auto 1.4rem auto; width: 92%;}
+.about_mesg .logo_ad_C { position: absolute;  width:column-width(500,1680); top: .4rem; left: 50%; margin-left: column-width(-250,1680);}
+.index_boot .boot_center .logo_boxxx { display: inline-block; position: relative; left: 0;    top: 0.43rem;}
+.index_boot .icon-ewm { display :inline-block; text-indent: 0; position: initial;  margin-left: .4rem;}
+.index_boot .boot_center { text-align: center;margin: 1.2rem auto 0.4rem auto;}
+.index_boot .boot_center .center_top { margin-bottom: 0;}
+.lun_list_box .lun_list .bxslider_box .bx-default-pager .bx-pager-item { width: 8px; height: 8px; border-radius: 4px;}
+.lun_list_box .lun_list .bxslider li .vedio_boot_mesg .vbm_mesg { margin-bottom: .1rem;}
+.lun_list_box .lun_list .bxslider li .vedio_boot_mesg .vbm_top { margin-top: .1rem; margin-bottom: .1rem;}
+.lun_list_box .lun_list .bxslider_box .bx-default-pager { bottom: .7rem;}
 
+ .plpelne_box .plp_nacb .typeb_f { width: column-width(500,1680) !important;
+ i { display: none;}
+    .top_titile { left: 0 !important; top: -1.3rem;}
+ }
+ 
+ .plpelne_box .plp_nacb .typeb_e i { display: inline-block;}
+}
+.iphone .btn_bofang {display: none;}
 @media screen and (max-width: 540px) {
      html {
        font-size: 30px;
     }
+    .about_us table {
+        margin: 5rem auto 1.4rem auto;
+    }
+    .mesg_list_box { margin: 1rem auto;}
+    
+     .lun_list_box .lun_list .bxslider li .btn_bofang{ width: 1rem; height: 1rem; line-height: 1rem;}
+ .lun_list_box .lun_list .bxslider li .btn_bofang .iconfont { font-size: .3rem;}
+ .boot_mesg_box { font-size: .24rem;}
+ x-wrapper,.bx-viewport { height: 100% !important; overflow: initial !important;}
 }
 //浏览器兼容
 @-moz-document url-prefix() { .mesg_box_box .r_mb{margin-top: .4rem; } }

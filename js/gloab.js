@@ -1,38 +1,20 @@
 var gettt = true;
 var index_of = 0;
 $(function() {
-	lun_nav();
 	auto_height();
-	//	setInterval(function(){
-	//		index_of++;
-	//		if(index_of>2){
-	//			index_of=0;
-	//		}
-	//		btn_click(index_of);
-	//	},6000);
 	$('.mesg_list').bxSlider({
 		controls: false,
 		auto: true,
 		pause: 5000,
 		speed: 500
 	});
-	$('.m_lun').bxSlider({
+	
+	$('.m_lun,.bxslider').bxSlider({
 		controls: false,
 		auto: false,
 		pause: 5000,
 		speed: 500
 	});
-
-	//	document.body.addEventListener('touchstart', function() {});
-	//	setTimeout(function() {
-	//		auto_height();
-	//		if ($("#gloab").hasClass("pc")) {
-	//			$("#banner_vedio").attr("autoplay", "autoplay");
-	//		}
-	//		var vedio_h=parseInt($(".banner_bcaaa:eq(0)").width())*.5;
-	//		$(".bxslider").height(vedio_h);
-	//	}, 10)
-	//	
 	document.body.addEventListener('touchstart', function() {});
 	setTimeout(function() {
 		auto_height();
@@ -48,13 +30,16 @@ $(function() {
 		var index = $(this).index();
 		var _this = $(this);
 		if (_this.find(".banner_bcaaa").get(0).paused) {
+//			for(var a=0;a<$(".bxslider li").length;a++){
+//				$(".bxslider li:eq("+a+")").find(".banner_bcaaa").get(0).pause();
+//			}
 			_this.find(".banner_bcaaa").get(0).play();
 				_this.find(".btn_bofang,.vedio_boot_mesg").hide();
-				$(".btn_nav").hide();
+				$(".bxslider_box .bx-has-pager").hide();
 		} else {
 			_this.find(".banner_bcaaa").get(0).pause();
 			_this.find(".btn_bofang,.vedio_boot_mesg").show();
-			$(".btn_nav").show();
+			$(".bxslider_box .bx-has-pager").show();
 		}
 
 	});
@@ -70,7 +55,7 @@ window.onscroll = function() {
 
 function auto_height() {
 	jiance();
-	var vedio_h = parseInt($(".bxslider").width()) * .5633;
+	var vedio_h = parseInt($(".bxslider_box").width()) * .5633;
 	var heightttt = $(".nacb_typea").width();
 	var herhe = $(".img_box").height();
 	var window_height = $(window).height();
@@ -79,7 +64,7 @@ function auto_height() {
 	var nav_here = $(".center_nav").height();
 	var body_width = $(window).width();
 	$(".mesg_box").height(herhe);
-	$(".bxslider").height(vedio_h);
+	$(".bxslider_box").height(vedio_h);
 	$(".nacb_typea").css("line-height", heightttt + "px");
 	var shengyu = (window_height - banner_height - nav_here);
 	if (shengyu > 0) {
@@ -139,31 +124,9 @@ function BottomJumpPage() {
 	}
 }
 
-
-
-
-function lun_nav() {
-	var length = $(".bxslider li").length;
-	var html = '';
-	for (var i = 0; i < length; i++) {
-		var tet = "";
-		if (i == 0) {
-			tet = '<span class="van_btn active"></span>';
-		} else {
-			tet = '<span class="van_btn activea"></span>';
-		}
-		html += tet;
-	}
-	$(".btn_nav").html(html);
-	$(".van_btn").on("click", function() {
-		var index = $(this).index();
-		btn_click(index);
-		index_of++;
-	});
-}
-function myFunction(){
-	alert("可以开始播放视频");
-}
+//function myFunction(){
+//	alert("可以开始播放视频");
+//}
 function btn_click(index) {
 	$(".bxslider li:eq(" + index + "),.btn_nav .van_btn:eq(" + index + ")").addClass("active").removeClass("activea").siblings().addClass("activea").removeClass("active");
 }
