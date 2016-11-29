@@ -369,16 +369,20 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
 }
 @media screen and (max-width: 825px) {
      html {
-       font-size: 46px;
+       font-size: 42px;
     }
     .video_deside { display: none !important;}
     .introduce .int_list { width: 64%;  margin-left: 18%; margin-right: 18%; overflow: hidden; margin-bottom: .8rem;
         &:last-child { margin-bottom: 0 !important;}
         &:hover .list_boot_mesg { padding-bottom: 0;}
         .list_boot_mesg { padding-bottom: 0;
-            .boot_mesg_box {position:static; margin-bottom: .4rem; padding-bottom: 0;}
+            .boot_mesg_box {position:static; margin-bottom: .4rem; padding-bottom: 0; width: 92%; margin-left: 4%;}
         }
     }
+ .lun_list_box .lun_list .bxslider li .btn_bofang{ width: 1rem; height: 1rem; line-height: 1rem;}
+ .lun_list_box .lun_list .bxslider li .btn_bofang .iconfont { font-size: .3rem;}
+ .lun_list_box .lun_list { width: 92%; left: 4%; right: 4%;}
+ .services_box .center_spc { text-align: left;}
   
 }
 //浏览器兼容

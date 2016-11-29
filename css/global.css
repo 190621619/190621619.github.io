@@ -886,7 +886,7 @@ footer {
     top: -10px; } }
 @media screen and (max-width: 825px) {
   html {
-    font-size: 46px; }
+    font-size: 42px; }
 
   .video_deside {
     display: none !important; }
@@ -906,7 +906,25 @@ footer {
       .introduce .int_list .list_boot_mesg .boot_mesg_box {
         position: static;
         margin-bottom: .4rem;
-        padding-bottom: 0; } }
+        padding-bottom: 0;
+        width: 92%;
+        margin-left: 4%; }
+
+  .lun_list_box .lun_list .bxslider li .btn_bofang {
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem; }
+
+  .lun_list_box .lun_list .bxslider li .btn_bofang .iconfont {
+    font-size: .3rem; }
+
+  .lun_list_box .lun_list {
+    width: 92%;
+    left: 4%;
+    right: 4%; }
+
+  .services_box .center_spc {
+    text-align: left; } }
 @-moz-document url-prefix() {
   .mesg_box_box .r_mb {
     margin-top: .4rem; } }

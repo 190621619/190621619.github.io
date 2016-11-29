@@ -62,8 +62,6 @@ $(function() {
 
 	window.onresize = function() {
 		auto_height();
-		var vedio_h=parseInt($(".banner_bcaaa:eq(0)").width())*.5;
-		$(".bxslider").height(vedio_h);
 	}
 	
 	window.onscroll=function(){
@@ -73,6 +71,8 @@ $(function() {
 
 	function auto_height() {
 		jiance();
+		var vedio_h=parseInt($(".bxslider").width())*.58;
+		$(".bxslider").height(vedio_h);
 		var heightttt=$(".nacb_typea").width();
 		var herhe=$(".img_box").height();
 		$(".nacb_typea").css("line-height",heightttt+"px");
