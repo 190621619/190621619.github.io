@@ -9,7 +9,13 @@ $(function() {
 		speed: 500
 	});
 	
-	$('.m_lun,.bxslider').bxSlider({
+	$('.bxslider').bxSlider({
+		controls: false,
+		auto: false,
+		pause: 5000,
+		speed: 500
+	});
+	$('.m_lun').bxSlider({
 		controls: false,
 		auto: false,
 		pause: 5000,

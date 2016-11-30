@@ -442,7 +442,7 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
 //.zefang_m { position: absolute; width: 10%; top: 3%; height: 94%; background: #000000;@include opacitya(.5); z-index: 999; }
 //.ze_left { left: -13.1%;}
 //.ze_right { right: -13.1%;}
-  .bx-viewport { overflow: visible !important;}
+  .bx-viewport { }
     .m_lun li { 
          img { float: left; width: 94%; margin:3%; }
     } 

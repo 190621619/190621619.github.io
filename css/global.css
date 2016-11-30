@@ -1088,8 +1088,6 @@ footer {
     display: block;
     margin-left: 9%;
     position: relative; }
-    .m_lun_box .bx-viewport {
-      overflow: visible !important; }
     .m_lun_box .m_lun li img {
       float: left;
       width: 94%;
