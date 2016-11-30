@@ -412,7 +412,7 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
              .right_here { margin-right:column-width(80,1680);}
              .bac_ff { background: #FFFFFF; color: #333333;}
              .bac_cc { background: #000000;}
-             .top_titile {position:absolute;top: 0 !important; height: 100%; min-height: 2rem; left: -260%; width:200%; display: table; line-height: 0;font-size: .32rem; color: #333333;
+             .top_titile {position:absolute;top: 0 !important; height: 0 !important; padding:50% 0; left: -260%; width:200%; display: table; line-height: 0;font-size: .32rem; color: #333333;
                 span{
     text-align: center;
     vertical-align: middle;
@@ -461,7 +461,7 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
 }
 .mesg_list_box .img_box { display: block; margin:0 auto .4rem auto; width:33%;}
 .about_us table {margin: 6.7rem auto 1.4rem auto; width: 92%;}
-.about_mesg .logo_ad_C { position: absolute;  width:column-width(100,750); top: .4rem; left: 50%; margin-left: column-width(-50,750);}
+.about_mesg .logo_ad_C { position: absolute;  width:column-width(250,750); top: .4rem; left: 50%; margin-left: column-width(-125,750);}
 .index_boot .boot_center .logo_boxxx { display: inline-block; position: relative; left: 0;    top: 0.43rem;}
 .index_boot .icon-ewm { display :inline-block; text-indent: 0; position: initial;  margin-left: .4rem;}
 .index_boot .boot_center { text-align: center;margin: 1.2rem auto 0.4rem auto;}
@@ -473,7 +473,7 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
 
  .plpelne_box .plp_nacb .typeb_f { width: column-width(100,750) !important; left: 50% !important;
  i { display: none;}
-    .top_titile { top: -.8rem;}
+    .top_titile { top: -1.8rem !important;}
  }
  
  .plpelne_box .plp_nacb .typeb_e i { display: inline-block;}
@@ -481,7 +481,7 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
 .iphone .btn_bofang {display: none;}
 @media screen and (max-width: 540px) {
      html {
-       font-size: 30px;
+       font-size: 40px;
     }
     .about_us table {
         margin: 5rem auto 1.4rem auto;

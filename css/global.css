@@ -1012,8 +1012,8 @@ footer {
       .plpelne_box .plp_nacb .top_titile {
         position: absolute;
         top: 0 !important;
-        height: 100%;
-        min-height: 2rem;
+        height: 0 !important;
+        padding: 50% 0;
         left: -260%;
         width: 200%;
         display: table;
@@ -1122,10 +1122,10 @@ footer {
 
   .about_mesg .logo_ad_C {
     position: absolute;
-    width: 13.33333%;
+    width: 33.33333%;
     top: .4rem;
     left: 50%;
-    margin-left: -6.66667%; }
+    margin-left: -16.66667%; }
 
   .index_boot .boot_center .logo_boxxx {
     display: inline-block;
@@ -1167,7 +1167,7 @@ footer {
     .plpelne_box .plp_nacb .typeb_f i {
       display: none; }
     .plpelne_box .plp_nacb .typeb_f .top_titile {
-      top: -.8rem; }
+      top: -1.8rem !important; }
 
   .plpelne_box .plp_nacb .typeb_e i {
     display: inline-block; } }
@@ -1176,7 +1176,7 @@ footer {
 
 @media screen and (max-width: 540px) {
   html {
-    font-size: 30px; }
+    font-size: 40px; }
 
   .about_us table {
     margin: 5rem auto 1.4rem auto; }
