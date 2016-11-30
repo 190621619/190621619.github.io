@@ -38,7 +38,7 @@ $(function() {
 	alert($("#gloab").attr("class"));
 	$(".iphone .nav_btn").on("click",function(){
 		alert("111");
-		window.href="http://zhuyihome.com/index.php?r=user%2Flogin"
+		window.localhost="http://zhuyihome.com/index.php?r=user%2Flogin"
 	})
 	var banner_top=$(".banner_nav").height();
 	$(".miaodiana").on("click",function(){
