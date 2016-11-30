@@ -8,7 +8,7 @@ $(function() {
 		pause: 5000,
 		speed: 500
 	});
-	
+
 	$('.bxslider').bxSlider({
 		controls: false,
 		auto: false,
@@ -28,22 +28,57 @@ $(function() {
 			$("#banner_vedio").attr("autoplay", "autoplay");
 			$("#banner_vedio").get(0).play();
 		}
-		var trans=$(".bxslider_box .bxslider").css(".transform");
+		var trans = $(".bxslider_box .bxslider").css(".transform");
 	}, 10)
+	var gettt=0;
 
+	$(".pc .nav_btn").on("click", function() {
+		$(".erwei_out").fadeToggle(300);
+	});
+	$(".iphone .nav_btn").on("click",function(){
+		window.href="http://zhuyihome.com/index.php?r=user%2Flogin"
+	})
+	var banner_top=$(".banner_nav").height();
+	$(".miaodiana").on("click",function(){
+		var inertop=parseInt($(".lun_list_box")[0].offsetTop)-banner_top;
+		var time=inertop/6;
+			$('body,html').animate({ scrollTop: inertop}, time);
+	});
 	
+	$(".miaodianb").on("click",function(){
+		var inertop=parseInt($(".designer_box")[0].offsetTop)-banner_top-40;
+		var time=inertop/6;
+			$('body,html').animate({ scrollTop: inertop}, time);
+	});
+	$(".miaodianc").on("click",function(){
+		var inertop=parseInt($(".services_box")[0].offsetTop)-banner_top-40;
+		var time=inertop/6;
+			$('body,html').animate({ scrollTop: inertop}, time);
+	});
+	$(".miaodiand").on("click",function(){
+		var inertop=parseInt($(".mesg_list_box")[0].offsetTop)-banner_top;
+		var time=inertop/6;
+			$('body,html').animate({ scrollTop: inertop}, time);
+	});
+	
+	$(document).bind("click", function(e) {
+		var target = $(e.target);
+		if (target.closest(".nav_btn").length == 0) {
+			$(".erwei_out").fadeOut(300);
+		}
+	})
 
 
 	$(".bxslider li").on("click", function() {
 		var index = $(this).index();
 		var _this = $(this);
 		if (_this.find(".banner_bcaaa").get(0).paused) {
-//			for(var a=0;a<$(".bxslider li").length;a++){
-//				$(".bxslider li:eq("+a+")").find(".banner_bcaaa").get(0).pause();
-//			}
+			//			for(var a=0;a<$(".bxslider li").length;a++){
+			//				$(".bxslider li:eq("+a+")").find(".banner_bcaaa").get(0).pause();
+			//			}
 			_this.find(".banner_bcaaa").get(0).play();
-				_this.find(".btn_bofang,.vedio_boot_mesg").hide();
-				$(".bxslider_box .bx-has-pager").hide();
+			_this.find(".btn_bofang,.vedio_boot_mesg").hide();
+			$(".bxslider_box .bx-has-pager").hide();
 		} else {
 			_this.find(".banner_bcaaa").get(0).pause();
 			_this.find(".btn_bofang,.vedio_boot_mesg").show();
@@ -51,28 +86,27 @@ $(function() {
 		}
 
 	});
-		
-	var a=[0,1,2,3,4,5,6];
-	var get_arr=getArrayItems(a,3);
-	var new_json=[
-	["img/head_1.jpg","陈喧","十上建筑","17"],
-	["img/head_2.jpg","程艳春","C+ Architects","10"],
-	["img/head_3.jpg","于魁","HAPPEN建筑","10"],
-	["img/head_4.jpg","程晖","唯木空间设计","12"],
-	["img/head_7.jpg","刘小普","Pu建筑","8"],
-	["img/head_6.jpg","关天颀","空间进化","20"],
-	["img/head_5.jpg","张淼","MAT Office","12"]
+
+	var a = [0, 1, 2, 3, 4, 5, 6];
+	var get_arr = getArrayItems(a, 3);
+	var new_json = [
+		["img/head_1.jpg", "陈喧", "十上建筑", "17"],
+		["img/head_2.jpg", "程艳春", "C+ Architects", "10"],
+		["img/head_3.jpg", "于魁", "HAPPEN建筑", "10"],
+		["img/head_4.jpg", "程晖", "唯木空间设计", "12"],
+		["img/head_7.jpg", "刘小普", "Pu建筑", "8"],
+		["img/head_6.jpg", "关天颀", "空间进化", "20"],
+		["img/head_5.jpg", "张淼", "MAT Office", "12"]
 	]
-	var html_box='';
-		for(var i=0;i<get_arr.length;i++){
-			var center="";
-			if(i==1){
-				center="bcf";
-			}
-			var desi_html='<div class="desi_list_here"><div class="desi_img_box"><img src="'+new_json[get_arr[i]][0]+'"></div>'
-						+'<div class="list_here_boot '+center+'"><h2 class="boot_name">'+new_json[get_arr[i]][1]+'</h2><span class="studio_name">'+new_json[get_arr[i]][2]+'</span><span class="work_time">'+new_json[get_arr[i]][3]+'年设计经验</span></div></div>'
-			html_box+=desi_html;			
+	var html_box = '';
+	for (var i = 0; i < get_arr.length; i++) {
+		var center = "";
+		if (i == 1) {
+			center = "bcf";
 		}
+		var desi_html = '<div class="desi_list_here"><div class="desi_img_box"><img src="' + new_json[get_arr[i]][0] + '"></div>' + '<div class="list_here_boot ' + center + '"><h2 class="boot_name">' + new_json[get_arr[i]][1] + '</h2><span class="studio_name">' + new_json[get_arr[i]][2] + '</span><span class="work_time">' + new_json[get_arr[i]][3] + '年设计经验</span></div></div>'
+		html_box += desi_html;
+	}
 	$(".desi_list").html(html_box);
 });
 
@@ -151,7 +185,7 @@ function BottomJumpPage() {
 	$(".nav_bc,.nav_btn i").css("opacity", bf_src);
 	if (bf_src > 0.23) {
 		$(".banner_nav").addClass("top_center");
-	}else{
+	} else {
 		$(".banner_nav").removeClass("top_center");
 	}
 	if (bf_src > 0.63) {
@@ -170,28 +204,28 @@ function btn_click(index) {
 }
 
 function getArrayItems(arr, num) {
-	
-    //新建一个数组,将传入的数组复制过来,用于运算,而不要直接操作传入的数组;
-    var temp_array = new Array();
-    for (var index in arr) {
-        temp_array.push(arr[index]);
-    }
-    //取出的数值项,保存在此数组
-    var return_array = new Array();
-    for (var i = 0; i<num; i++) {
-        //判断如果数组还有可以取出的元素,以防下标越界
-        if (temp_array.length>0) {
-            //在数组中产生一个随机索引
-            var arrIndex = Math.floor(Math.random()*temp_array.length);
-            //将此随机索引的对应的数组元素值复制出来
-            return_array[i] = temp_array[arrIndex];
-            //然后删掉此索引的数组元素,这时候temp_array变为新的数组
-            temp_array.splice(arrIndex, 1);
-        } else {
-            //数组中数据项取完后,退出循环,比如数组本来只有10项,但要求取出20项.
-            break;
-        }
-    }
-    return return_array;
-  
+
+	//新建一个数组,将传入的数组复制过来,用于运算,而不要直接操作传入的数组;
+	var temp_array = new Array();
+	for (var index in arr) {
+		temp_array.push(arr[index]);
+	}
+	//取出的数值项,保存在此数组
+	var return_array = new Array();
+	for (var i = 0; i < num; i++) {
+		//判断如果数组还有可以取出的元素,以防下标越界
+		if (temp_array.length > 0) {
+			//在数组中产生一个随机索引
+			var arrIndex = Math.floor(Math.random() * temp_array.length);
+			//将此随机索引的对应的数组元素值复制出来
+			return_array[i] = temp_array[arrIndex];
+			//然后删掉此索引的数组元素,这时候temp_array变为新的数组
+			temp_array.splice(arrIndex, 1);
+		} else {
+			//数组中数据项取完后,退出循环,比如数组本来只有10项,但要求取出20项.
+			break;
+		}
+	}
+	return return_array;
+
 }

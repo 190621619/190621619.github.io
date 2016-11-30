@@ -87,6 +87,14 @@ body {
   .center_spc{ font-size: .28rem;  color: #666666; margin-top: .6rem;display: block; width: 92%; margin-left: 4%; text-align: center; line-height: 1.5;}
 .center_spb { color: #FF4E38; font-size: .30rem !important; display: block; text-align: center;}
 .center_spa{ font-size: .56rem; margin-top: .2rem; display: block; text-align: center;}
+.erweima_box {  
+       top: .7rem;
+    position: absolute;
+    text-indent: 0;
+    right: 29%;
+    box-sizing: border-box;
+    color: #333333;
+    }
 //新的代码
 .lun_big_box { float: left; width: 100%; overflow: hidden;}
 @mixin opacitya($opac:.5) {
@@ -159,10 +167,17 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
 }
 .vedio_bcc { position: absolute; width: 100%; height: 100%; background: #000000; @include opacitya(.35); z-index: 1004;}
 .banner_nav { position: fixed; height: 1.2rem; top: 0; width: 100%; z-index: 1999; color: #FFFFFF; line-height: 1.2rem; 
-      
+      .erwei_out { position: absolute; width: 2.4rem;  right: column-width(); top: 1rem; background: #FFFFFF; line-height: 0; margin-top: 16px;box-shadow: 0 1px 2px #cccccc; display: none; 
+                    img{width: 2rem; margin: .2rem;}
+                    .sanjiao { position: absolute; right: .2rem; width: 0; height: 0; top: -10px;
+                                border-left:10px solid transparent;   
+                                border-right:10px solid transparent;   
+                                border-bottom:10px solid #fff;}
+                    div  { text-align: center; line-height:1.5;color: #333333; margin-bottom: .2rem;}
+                }
         span{float: left; margin-left: column-width(); font-size: .54rem; height: 100%;}
         ul {position: absolute; width: 100%;top: 0; right: column-width(); height: 100%; 
-            li { float: right; margin-left: column-width(80,1680);
+            li { float: right; margin-left: column-width(80,1680); position: relative;
                 .nav_btn{ padding: 8px 18px; position: relative; z-index: 2; display: inline; box-sizing: border-box; border: 2px solid #FFFFFF;}
                  .nav_btn:hover { background: #e54632; color: #FFFFFF; border-color: #e54632;}
                 .nav_btn i {position: absolute; z-index: -1; width: 100%; height: 100%; left: 0; top: 0; @include opacitya(0); background: #FF4E38;}
@@ -179,10 +194,11 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
               &.center ul li a:hover { color: #FF4E38;}
               &.center span { color: #FF4E38;}
 }
+.center_font { font-size: .24rem; color: #FFFFFF;}
 .lun_list_box { background: #F2F2F2; float: left; width: 100%;
 .lun_list {float: left; position: relative;width: 80%;left: 10%;right: 10%; margin-top: 1.6rem; margin-bottom: 1.6rem;
 .bxslider_box {  margin-top: .8rem;
-    .bx-default-pager { text-align: center; margin-top: .4rem; position: absolute; bottom: .2rem; right: .4rem;
+    .bx-default-pager { text-align: center; margin-top: .4rem; position: absolute; bottom: .6rem; right: .4rem;
         .bx-pager-item { display: inline-block; cursor: pointer; width:30px; height: 8px; background: #585a5a; margin-right: 10px;overflow: hidden;
             a { float: left; width: 100%; height: 100%;}
         }
@@ -190,6 +206,8 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
         .bx-pager-item.hyeee { background: #FF4E38;}
     }
 }
+
+    
 .bx-wrapper,.bx-viewport { height: 100% !important;}
     .bxslider { position: relative; left:0 ; right: 0; 
             li,li img { float: left; width: 100%;}
@@ -212,7 +230,7 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
                     &::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #FFFFFF;@include opacitya(.9); z-index: -1;}
                     >div { margin-left: column-width(30,1680);}
                     .vbm_top { margin-top: .3rem; margin-bottom: .1rem;}
-                    .vbm_where,.vbm_name{ color: #666666; margin-right: .4rem; font-size: .18rem;}
+                    .vbm_where,.vbm_name{ color: #666666; margin-right: .4rem; font-size: .24rem;}
                     .vbm_mesg { margin-bottom: .3rem;}
                   }  
              }
@@ -320,7 +338,7 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
         
         }
 }
-.mesg_list_box{ float: left; width: 100%; position: relative; overflow: hidden; margin: 1.6rem auto; text-align: center;
+.mesg_list_box{ float: left; width: 100%; position: relative; overflow: hidden; margin: 0rem auto 1.6rem auto; padding-top: 1.6rem; text-align: center;
     .img_box {width:column-width(300,1680); overflow: hidden; height:column-width(300,1680); border-radius: column-width(150,1680); display: inline-block;
          img {     width: 100%;
                     float: left;
@@ -330,9 +348,11 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
     .right_mesga { display: inline-block;line-height: 1.5;  margin-left: 1.2rem;  text-align: left;
     
         .mesg_box {display: table;height:260px;position: relative;
-        .mesg_box_box { vertical-align: middle;display: table-cell;position: relative; width: 38em;
+        .mesg_box_box { vertical-align: middle;display: table-cell;position: relative; width: 40em;
                 .r_ma { font-size: .32rem; }
-                .r_mb { position: absolute; right: -10px; margin-top: .3rem; }
+                .r_mb { position: absolute; right: -10px; margin-top:1rem;  text-align: right; font-weight: bold;
+                        i { color: #666666; font-size: .24rem; font-weight: 300;}
+                    }
         }
     }
     }
@@ -350,14 +370,14 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
 }
 .index_boot { float: left; width: 100%; text-align: center; background: #333333;  color: #FFFFFF;
         .icon-logo01 { color: #FF4E38;}
+        a { color: #FFFFFF;}
         .icon-logo- { position: absolute; left: 0; top: 0;}
-        .icon-ewm {border-right: 3px solid #FFFFFF; font-size: 1.2rem !important; top: .7rem; position: absolute; text-indent: 0;right: 29%;
+        .icon-ewm { width: 1.16rem !important; top: .7rem; position: initial; text-indent: 0;right: 29%;
         box-sizing: border-box;
         color: #333333;
-        border-left: 3px solid #FFFFFF;
         background: #FFFFFF;}
         .iconfont { font-size: 2rem;}
-     .boot_center {  text-align: center; text-indent: .7rem; margin: 1.2rem .6rem 2rem .6rem; position: relative;
+     .boot_center {  text-align: center;  margin: 1.2rem .6rem 2rem .6rem; position: relative;
      .logo_boxxx { position: absolute; text-indent: 0; top: .4rem; left: 29%;}
     .center_top { margin-bottom: 1rem; text-indent: 0;
         span:nth-child(2) { margin: 0 .8rem;}
@@ -399,6 +419,12 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
      html {
        font-size: 42px;
     }
+    .erweima_box {
+    position: initial;
+    text-indent: 0;
+    color: #333333;
+}
+    .center_font {  margin-bottom: .4rem;}
     #gloab .font_big { font-size: .88rem;}
     .plpelne_box { float: left; width: 100%; position: relative;padding-top: 1.6rem; background: #f2f2f2;
         .plp_naca{ text-align:center; position: relative; margin-top: 1.6rem;
@@ -481,14 +507,14 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
 .about_us table {margin: 2rem auto .4rem auto; width: 70%;}
 .about_mesg .logo_ad_C { position: relative;  width:column-width(250,750); top: .4rem; left: 50%; margin-left: column-width(-125,750);}
 .index_boot .boot_center .logo_boxxx { display: inline-block; position: relative; left: 0;    top: 0.43rem;}
-.index_boot .icon-ewm { display :inline-block; text-indent: 0; position: initial;  margin-left: .4rem;}
+.index_boot .icon-ewm { display :block; text-indent: 0; position: initial;  margin:.4rem auto .1rem auto; }
 .index_boot .boot_center { text-align: center;margin: 1.2rem auto 0.4rem auto;}
 .index_boot .boot_center .center_top { margin-bottom: 0;}
 .lun_list_box .lun_list .bxslider_box .bx-default-pager .bx-pager-item { width: 8px; height: 8px; border-radius: 4px;}
 .lun_list_box .lun_list .bxslider li .vedio_boot_mesg .vbm_mesg { margin-bottom: .1rem;}
 .lun_list_box .lun_list .bxslider li .vedio_boot_mesg .vbm_top { margin-top: .1rem; margin-bottom: .1rem;}
 .lun_list_box .lun_list .bxslider_box .bx-default-pager { bottom: .7rem;}
-
+.mail { margin-bottom: .2rem;}
  .plpelne_box .plp_nacb .typeb_f { width: column-width(100,750) !important; left: 50% !important;
  i { display: none;}
     .top_titile { top: -1.8rem !important;}
