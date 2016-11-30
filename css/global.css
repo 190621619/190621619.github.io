@@ -306,8 +306,7 @@ body {
     .lun_list_box .lun_list .bxslider {
       position: relative;
       left: 0;
-      right: 0;
-      width: 724% !important; }
+      right: 0; }
       .lun_list_box .lun_list .bxslider li, .lun_list_box .lun_list .bxslider li img {
         float: left;
         width: 100%; }
@@ -325,8 +324,7 @@ body {
         /* 支持opacity的浏览器*/
         height: 100%;
         z-index: 9;
-        overflow: hidden;
-        margin-right: .5%; }
+        overflow: hidden; }
         .lun_list_box .lun_list .bxslider li:last-child {
           margin-right: 0px; }
         .lun_list_box .lun_list .bxslider li .btn_bofang {
@@ -366,6 +364,8 @@ body {
         .lun_list_box .lun_list .bxslider li .banner_bcaaa {
           float: left;
           width: 100%;
+          width: 96%;
+          margin: 0 2%;
           background: transparent url("../img/shipin.jpg") 50% 50% no-repeat;
           -webkit-background-size: cover;
           -moz-background-size: cover;
@@ -376,7 +376,8 @@ body {
           position: absolute;
           left: 0;
           bottom: -1px;
-          width: 100%;
+          width: 96%;
+          margin: 0 2%;
           z-index: 9; }
           .lun_list_box .lun_list .bxslider li .vedio_boot_mesg::after {
             content: "";
@@ -1010,8 +1011,9 @@ footer {
         background: #000000; }
       .plpelne_box .plp_nacb .top_titile {
         position: absolute;
-        top: 0;
+        top: 0 !important;
         height: 100%;
+        min-height: 2rem;
         left: -260%;
         width: 200%;
         display: table;
@@ -1032,9 +1034,9 @@ footer {
     display: none !important; }
 
   .introduce .int_list {
-    width: 64%;
-    margin-left: 18%;
-    margin-right: 18%;
+    width: 72%;
+    margin-left: 14%;
+    margin-right: 14%;
     overflow: hidden;
     margin-bottom: .8rem; }
     .introduce .int_list:last-child {
@@ -1111,7 +1113,8 @@ footer {
 
   .mesg_list_box .img_box {
     display: block;
-    margin: 0 auto .4rem auto; }
+    margin: 0 auto .4rem auto;
+    width: 33%; }
 
   .about_us table {
     margin: 6.7rem auto 1.4rem auto;
