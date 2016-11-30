@@ -1225,7 +1225,6 @@ footer {
     font-size: .24rem; }
 
   x-wrapper, .bx-viewport {
-    height: 100% !important;
     overflow: initial !important; } }
 @-moz-document url-prefix() {
   .mesg_box_box .r_mb {

@@ -288,6 +288,7 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
             }
         }
  }
+ 
 .services_box { float: left; width: 100%; position: relative;margin-top: 1.6rem; margin-bottom: 1.2rem;}
 .plpelne_box { float: left; width: 100%; position: relative;padding-top: 1.6rem; background: #f2f2f2;
         .plp_naca{ text-align:center; position: relative; margin-top: 1.6rem;
@@ -502,7 +503,7 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
      .lun_list_box .lun_list .bxslider li .btn_bofang{ width: 1rem; height: 1rem; line-height: 1rem;}
  .lun_list_box .lun_list .bxslider li .btn_bofang .iconfont { font-size: .3rem;}
  .boot_mesg_box { font-size: .24rem;}
- x-wrapper,.bx-viewport { height: 100% !important; overflow: initial !important;}
+ x-wrapper,.bx-viewport { overflow: initial !important;}
 }
 //浏览器兼容
 @-moz-document url-prefix() { .mesg_box_box .r_mb{margin-top: .4rem; } }
