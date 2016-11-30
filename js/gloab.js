@@ -2,25 +2,6 @@ var gettt = true;
 var index_of = 0;
 $(function() {
 	auto_height();
-	$('.mesg_list').bxSlider({
-		controls: false,
-		auto: true,
-		pause: 5000,
-		speed: 500
-	});
-
-	$('.bxslider').bxSlider({
-		controls: false,
-		auto: false,
-		pause: 5000,
-		speed: 300
-	});
-	$('.m_lun').bxSlider({
-		controls: false,
-		auto: false,
-		pause: 5000,
-		speed: 500
-	});
 	document.body.addEventListener('touchstart', function() {});
 	setTimeout(function() {
 		auto_height();
@@ -28,41 +9,65 @@ $(function() {
 			$("#banner_vedio").attr("autoplay", "autoplay");
 			$("#banner_vedio").get(0).play();
 		}
-		var trans = $(".bxslider_box .bxslider").css(".transform");
+		$('.mesg_list').bxSlider({
+			controls: false,
+			auto: true,
+			pause: 5000,
+			speed: 500
+		});
+
+		$('.bxslider').bxSlider({
+			controls: false,
+			auto: false,
+			pause: 5000,
+			speed: 300
+		});
+		$('.m_lun').bxSlider({
+			controls: false,
+			auto: false,
+			pause: 5000,
+			speed: 500
+		});
 	}, 10)
-	var gettt=0;
+	var gettt = 0;
 
 	$(".pc .nav_btn").on("click", function() {
 		$(".erwei_out").fadeToggle(300);
 	});
-	alert($("#gloab").attr("class"));
-	$(".iphone .nav_btn").on("click",function(){
-		alert("111");
-		window.localhost="http://zhuyihome.com/index.php?r=user%2Flogin"
+	$(".iphone .nav_btn").on("click", function() {
+		window.location.href = "http://zhuyihome.com/index.php?r=user%2Flogin"
 	})
-	var banner_top=$(".banner_nav").height();
-	$(".miaodiana").on("click",function(){
-		var inertop=parseInt($(".lun_list_box")[0].offsetTop)-banner_top;
-		var time=inertop/6;
-			$('body,html').animate({ scrollTop: inertop}, time);
+	var banner_top = $(".banner_nav").height();
+	$(".miaodiana").on("click", function() {
+		var inertop = parseInt($(".lun_list_box")[0].offsetTop) - banner_top;
+		var time = inertop / 6;
+		$('body,html').animate({
+			scrollTop: inertop
+		}, time);
 	});
-	
-	$(".miaodianb").on("click",function(){
-		var inertop=parseInt($(".designer_box")[0].offsetTop)-banner_top-40;
-		var time=inertop/6;
-			$('body,html').animate({ scrollTop: inertop}, time);
+
+	$(".miaodianb").on("click", function() {
+		var inertop = parseInt($(".designer_box")[0].offsetTop) - banner_top - 40;
+		var time = inertop / 6;
+		$('body,html').animate({
+			scrollTop: inertop
+		}, time);
 	});
-	$(".miaodianc").on("click",function(){
-		var inertop=parseInt($(".services_box")[0].offsetTop)-banner_top-40;
-		var time=inertop/6;
-			$('body,html').animate({ scrollTop: inertop}, time);
+	$(".miaodianc").on("click", function() {
+		var inertop = parseInt($(".services_box")[0].offsetTop) - banner_top - 40;
+		var time = inertop / 6;
+		$('body,html').animate({
+			scrollTop: inertop
+		}, time);
 	});
-	$(".miaodiand").on("click",function(){
-		var inertop=parseInt($(".mesg_list_box")[0].offsetTop)-banner_top;
-		var time=inertop/6;
-			$('body,html').animate({ scrollTop: inertop}, time);
+	$(".miaodiand").on("click", function() {
+		var inertop = parseInt($(".mesg_list_box")[0].offsetTop) - banner_top;
+		var time = inertop / 6;
+		$('body,html').animate({
+			scrollTop: inertop
+		}, time);
 	});
-	
+
 	$(document).bind("click", function(e) {
 		var target = $(e.target);
 		if (target.closest(".nav_btn").length == 0) {
