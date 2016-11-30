@@ -155,6 +155,8 @@ body {
   color: #666666;
   margin-top: .6rem;
   display: block;
+  width: 92%;
+  margin-left: 4%;
   text-align: center;
   line-height: 1.5; }
 
@@ -216,10 +218,13 @@ body {
         padding: 8px 18px;
         position: relative;
         z-index: 2;
-        display: inline; }
+        display: inline;
+        box-sizing: border-box;
+        border: 2px solid #FFFFFF; }
       .banner_nav ul li .nav_btn:hover {
         background: #e54632;
-        color: #FFFFFF; }
+        color: #FFFFFF;
+        border-color: #e54632; }
       .banner_nav ul li .nav_btn i {
         position: absolute;
         z-index: -1;
@@ -258,11 +263,15 @@ body {
     opacity: 0;
     /* 支持opacity的浏览器*/ }
   .banner_nav.center {
-    border-bottom: 1px solid #F2F2F2; }
+    border-bottom: 1px solid #F2F2F2;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); }
   .banner_nav.center .nav_btn {
     border-color: #FF4E38;
     background: #FF4E38;
     color: #FFFFFF !important; }
+  .banner_nav.top_center .nav_btn {
+    border: none;
+    padding: 10px 20px; }
   .banner_nav.center ul li a {
     color: #333333; }
   .banner_nav.center ul li a:hover {
@@ -606,10 +615,6 @@ body {
     /* Opera */
     top: 0;
     left: 0; }
-    .img_list img:hover {
-      width: 104%;
-      left: -2%;
-      top: -2%; }
   .img_list .img_a {
     float: left;
     margin-bottom: .4rem; }
@@ -659,7 +664,8 @@ body {
     right: 0;
     margin: 0 auto;
     width: 71.42857%;
-    margin-top: .8rem; }
+    margin-top: .8rem;
+    text-align: left; }
     .designer_box .desi_list .desi_list_here {
       float: left;
       width: 33.33%;
@@ -682,7 +688,7 @@ body {
           font-weight: bold;
           padding-top: .6rem; }
         .designer_box .desi_list .desi_list_here .list_here_boot .studio_name {
-          margin: .3rem auto 0 auto; }
+          margin: .3rem .3rem 0 .3rem; }
         .designer_box .desi_list .desi_list_here .list_here_boot .work_time {
           padding-bottom: .6rem; }
       .designer_box .desi_list .desi_list_here .list_here_boot.bcf {
@@ -800,7 +806,8 @@ body {
   .mesg_list_box .right_mesga {
     display: inline-block;
     line-height: 1.5;
-    margin-left: 1.2rem; }
+    margin-left: 1.2rem;
+    text-align: left; }
     .mesg_list_box .right_mesga .mesg_box {
       display: table;
       height: 260px;
@@ -808,7 +815,10 @@ body {
       .mesg_list_box .right_mesga .mesg_box .mesg_box_box {
         vertical-align: middle;
         display: table-cell;
-        position: relative; }
+        position: relative;
+        width: 38em; }
+        .mesg_list_box .right_mesga .mesg_box .mesg_box_box .r_ma {
+          font-size: .32rem; }
         .mesg_list_box .right_mesga .mesg_box .mesg_box_box .r_mb {
           position: absolute;
           right: -10px;
@@ -845,7 +855,7 @@ body {
   .about_us table {
     position: relative;
     left: 0;
-    margin: 1.4rem auto 2.4rem auto;
+    margin: 0 auto;
     text-align: left;
     line-height: 1.5; }
 
@@ -867,7 +877,7 @@ body {
     top: .7rem;
     position: absolute;
     text-indent: 0;
-    right: 24%;
+    right: 29%;
     box-sizing: border-box;
     color: #333333;
     border-left: 3px solid #FFFFFF;
@@ -883,9 +893,9 @@ body {
       position: absolute;
       text-indent: 0;
       top: .4rem;
-      left: 24%; }
+      left: 29%; }
     .index_boot .boot_center .center_top {
-      margin-bottom: .8rem;
+      margin-bottom: 1rem;
       text-indent: 0; }
       .index_boot .boot_center .center_top span:nth-child(2) {
         margin: 0 .8rem; }
@@ -906,16 +916,32 @@ footer {
 
 .about_mesg {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 1.4rem 0 3rem; }
   .about_mesg .logo_ad_C {
     position: absolute;
+    height: 0;
     width: 14.88095%;
-    top: 1.4rem;
+    top: 0;
+    bottom: 0;
+    padding-bottom: 5.35714%;
+    margin: auto 0;
     left: 7.14286%; }
     .about_mesg .logo_ad_C img {
       float: left;
-      width: 100%;
-      margin-bottom: .4rem; }
+      width: 100%; }
+
+.ser_table {
+  position: relative;
+  left: 0;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.5;
+  width: 42%;
+  margin-top: .6rem; }
+
+.m_lun_box {
+  display: none; }
 
 @media screen and (max-width: 1080px) {
   html {
@@ -937,6 +963,9 @@ footer {
 @media screen and (max-width: 825px) {
   html {
     font-size: 42px; }
+
+  #gloab .font_big {
+    font-size: .88rem; }
 
   .plpelne_box {
     float: left;

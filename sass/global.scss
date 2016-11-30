@@ -84,7 +84,7 @@ body {
 #gloab .font_big { font-size: 1rem; color: #FFFFFF; clear: both; display:block; font-weight:300;text-shadow: 1px 0px 0px #666666; margin: .4rem auto .4rem auto; text-align: center;}
 .font_center { font-size: .48rem; color: #FFFFFF;text-shadow: 1px 0px 0px #666666; margin: 0 .4rem;}
 .center_nav { clear: both; float: left; width: 100%; padding: 1.2rem 0;  text-align: center;}
-  .center_spc{ font-size: .28rem;  color: #666666; margin-top: .6rem;display: block; text-align: center; line-height: 1.5;}
+  .center_spc{ font-size: .28rem;  color: #666666; margin-top: .6rem;display: block; width: 92%; margin-left: 4%; text-align: center; line-height: 1.5;}
 .center_spb { color: #FF4E38; font-size: .30rem !important; display: block; text-align: center;}
 .center_spa{ font-size: .56rem; margin-top: .2rem; display: block; text-align: center;}
 //新的代码
@@ -163,16 +163,18 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
         span{float: left; margin-left: column-width(); font-size: .54rem; height: 100%;}
         ul {position: absolute; width: 100%;top: 0; right: column-width(); height: 100%; 
             li { float: right; margin-left: column-width(80,1680);
-                .nav_btn{ padding: 8px 18px; position: relative; z-index: 2; display: inline;}
-                 .nav_btn:hover { background: #e54632; color: #FFFFFF;}
+                .nav_btn{ padding: 8px 18px; position: relative; z-index: 2; display: inline; box-sizing: border-box; border: 2px solid #FFFFFF;}
+                 .nav_btn:hover { background: #e54632; color: #FFFFFF; border-color: #e54632;}
                 .nav_btn i {position: absolute; z-index: -1; width: 100%; height: 100%; left: 0; top: 0; @include opacitya(0); background: #FF4E38;}
                 a{color: #FFFFFF; display: block;}
                 a:hover { color: #FF4E38;}
                 }
             }
             .nav_bc { position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: -1; background: #FFFFFF; @include opacitya(0);}
-              &.center { border-bottom: 1px solid #F2F2F2;}
+              &.center { border-bottom: 1px solid #F2F2F2; box-shadow: 0 1px 5px rgba(0,0,0,.1);}
+             
               &.center .nav_btn { border-color: #FF4E38; background: #FF4E38; color: #FFFFFF !important;}
+              &.top_center .nav_btn { border:none; padding: 10px 20px;} 
               &.center ul li a { color: #333333;}
               &.center ul li a:hover { color: #FF4E38;}
               &.center span { color: #FF4E38;}
@@ -250,7 +252,7 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
                 div { overflow: hidden;}
             }
             img {width: 100%; position: relative; float:left; @include width_size(.6s,ease-out); top:0;left: 0;
-            &:hover { width: 104%; left:-2%;top: -2%;}
+//          &:hover { width: 104%; left:-2%;top: -2%;}
             }
             .img_a {float: left; margin-bottom: .4rem;}
             .img_list_left {  width:column-width(1110,1680);
@@ -270,7 +272,7 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
             
 }
 .designer_box {float: left; width: 100%; position: relative;margin-top: 1.6rem;
-        .desi_list { position: relative; left: 0; right: 0; margin: 0 auto; width:column-width(1200,1680) ;margin-top: .8rem;
+        .desi_list { position: relative; left: 0; right: 0; margin: 0 auto; width:column-width(1200,1680) ;margin-top: .8rem; text-align: left;
             .desi_list_here { 
             float: left; width:33.33%;text-align: center;
                 .desi_img_box { width: 100%; height: 0; padding-bottom: 100%; overflow: hidden;
@@ -279,7 +281,7 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
                 .list_here_boot { background: #f2f2f2;
                     span { display: block; font-size: .28rem;}
                     .boot_name { color: #ff4e38; font-size: .36rem; font-weight: bold; padding-top: .6rem;}
-                    .studio_name { margin: .3rem auto 0 auto;}
+                    .studio_name { margin: .3rem .3rem 0 .3rem;}
                     .work_time { padding-bottom: .6rem;}
                 }
                 .list_here_boot.bcf { background: #FFFFFF;}
@@ -325,10 +327,11 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
                     border-radius: 50%;
                     height: 100%;}
     }
-    .right_mesga { display: inline-block;line-height: 1.5;  margin-left: 1.2rem;
+    .right_mesga { display: inline-block;line-height: 1.5;  margin-left: 1.2rem;  text-align: left;
     
         .mesg_box {display: table;height:260px;position: relative;
-        .mesg_box_box { vertical-align: middle;display: table-cell;position: relative;
+        .mesg_box_box { vertical-align: middle;display: table-cell;position: relative; width: 38em;
+                .r_ma { font-size: .32rem; }
                 .r_mb { position: absolute; right: -10px; margin-top: .3rem; }
         }
     }
@@ -343,20 +346,20 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
     }
 }
 .about_us { float: left; width:100%; clear: both; overflow: hidden; position: relative; text-align: center; background: #f2f2f2; padding-top: 1.6rem;
-    table { position: relative;  left: 0; margin: 1.4rem auto 2.4rem auto; text-align: left;  line-height: 1.5;}
+    table { position: relative;  left: 0; margin: 0 auto; text-align: left;  line-height: 1.5;}
 }
 .index_boot { float: left; width: 100%; text-align: center; background: #333333;  color: #FFFFFF;
         .icon-logo01 { color: #FF4E38;}
         .icon-logo- { position: absolute; left: 0; top: 0;}
-        .icon-ewm {border-right: 3px solid #FFFFFF; font-size: 1.2rem !important; top: .7rem; position: absolute; text-indent: 0;right: 24%;
+        .icon-ewm {border-right: 3px solid #FFFFFF; font-size: 1.2rem !important; top: .7rem; position: absolute; text-indent: 0;right: 29%;
         box-sizing: border-box;
         color: #333333;
         border-left: 3px solid #FFFFFF;
         background: #FFFFFF;}
         .iconfont { font-size: 2rem;}
      .boot_center {  text-align: center; text-indent: .7rem; margin: 1.2rem .6rem 2rem .6rem; position: relative;
-     .logo_boxxx { position: absolute; text-indent: 0; top: .4rem; left: 24%;}
-    .center_top { margin-bottom: .8rem; text-indent: 0;
+     .logo_boxxx { position: absolute; text-indent: 0; top: .4rem; left: 29%;}
+    .center_top { margin-bottom: 1rem; text-indent: 0;
         span:nth-child(2) { margin: 0 .8rem;}
         a { color: #FFFFFF;
             &:hover { color: #FF4E38;}
@@ -365,13 +368,21 @@ animation:#{$img} #{$timea} ease-out 1 0s;-webkit-animation:#{$img} #{$timea} ea
 }
 }
 footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .24rem; color: #CCCCCC; float: left; width: 100%; line-height: 1.5;}
-.about_mesg { position: relative; overflow: hidden;
-        .logo_ad_C { position: absolute;  width:column-width(250,1680); top: 1.4rem; left: column-width(120,1680);
-            img { float: left; width: 100%; margin-bottom: .4rem;}
+.about_mesg { position: relative; overflow: hidden;    margin: 1.4rem 0 3rem;
+        .logo_ad_C { position: absolute;  height: 0; width:column-width(250,1680); top: 0; bottom: 0; padding-bottom: column-width(90,1680); margin: auto 0; left: column-width(120,1680);
+            img { float: left; width: 100%;}
         }
     
 }
-//.m_lun_box { display: none;}
+.ser_table {    position: relative;
+    left: 0;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.5;
+    width: 42%;
+    margin-top: .6rem;
+    }
+.m_lun_box { display: none;}
 //开始媒体查询
 @media screen and (max-width: 1080px) {
      html {
@@ -386,7 +397,7 @@ footer { text-align: center; padding: .6rem 0; background: #222222; font-size: .
      html {
        font-size: 42px;
     }
-    
+    #gloab .font_big { font-size: .88rem;}
     .plpelne_box { float: left; width: 100%; position: relative;padding-top: 1.6rem; background: #f2f2f2;
         .plp_naca{ text-align:center; position: relative; margin-top: 1.6rem;
             >div { 
