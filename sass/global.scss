@@ -55,7 +55,7 @@ body {
         /*height: 100%;*/
     }
 .banner_bc { position: absolute; width: 100%;  min-height: 100%; margin: 0 auto; left: 0; right: 0; top: 0;}
-#gloab,.banner {width: 100%; float: left; font-size: .28rem;overflow: hidden; }
+#gloab,.banner {width: 100%; float: left; font-size: .28rem; overflow: hidden;}
 .banner { width:100%; position: relative; background: #FFFFFF;
     }
     .video_deside {
@@ -88,7 +88,7 @@ body {
 .center_spb { color: #FF4E38; font-size: .30rem !important; display: block; text-align: center;}
 .center_spa{ font-size: .56rem; margin-top: .2rem; display: block; text-align: center;}
 //新的代码
-
+.lun_big_box { float: left; width: 100%; overflow: hidden;}
 @mixin opacitya($opac:.5) {
 filter:alpha(opacity=$opac*100); /* IE */  
 -moz-opacity:$opac; /* 老版Mozilla */  
