@@ -55,8 +55,8 @@ body {
         /*height: 100%;*/
     }
 .banner_bc { position: absolute; width: 100%;  min-height: 100%; margin: 0 auto; left: 0; right: 0; top: 0;}
-#gloab,.banner {width: 100%; float: left; font-size: .28rem;}
-.banner { overflow: hidden; width:100%; position: relative; background: #FFFFFF;
+#gloab,.banner {width: 100%; float: left; font-size: .28rem;overflow: hidden; }
+.banner { width:100%; position: relative; background: #FFFFFF;
     }
     .video_deside {
         width: 100%;
