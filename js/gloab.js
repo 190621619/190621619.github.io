@@ -2,6 +2,12 @@ var gettt = true;
 var index_of = 0;
 $(function() {
 	auto_height();
+	 var mySwiper = new Swiper ('.swiper-container', {
+     pagination: '.pagination',
+    loop:true,    grabCursor: true,
+     pagination: '.swiper-pagination',
+    paginationClickable: true
+  })    
 	document.body.addEventListener('touchstart', function() {});
 	setTimeout(function() {
 		auto_height();
@@ -9,28 +15,9 @@ $(function() {
 			$("#banner_vedio").attr("autoplay", "autoplay");
 			$("#banner_vedio").get(0).play();
 		}
-		$('.mesg_list').bxSlider({
-			controls: false,
-			auto: true,
-			pause: 5000,
-			speed: 500
-		});
 
-		$('.bxslider').bxSlider({
-			controls: false,
-			auto: false,
-			pause: 5000,
-			speed: 300
-		});
-		$('.m_lun').bxSlider({
-			controls: false,
-			auto: false,
-			pause: 5000,
-			speed: 500
-		});
 	}, 10)
 	var gettt = 0;
-
 	$(".pc .nav_btn").on("click", function() {
 		$(".erwei_out").fadeToggle(300);
 	});
@@ -76,7 +63,7 @@ $(function() {
 	})
 
 
-	$(".bxslider li").on("click", function() {
+	$(".bxslider>div").on("click", function() {
 		var index = $(this).index();
 		var _this = $(this);
 		if (_this.find(".banner_bcaaa").get(0).paused) {
