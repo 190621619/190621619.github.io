@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset=utf-8>
+		<title>播放列表</title>
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.4">
+		<meta name="MobileOptimized" content="240">
+
+		<link href="http://at.alicdn.com/t/font_q919cpsl6561or.css" rel="stylesheet" type="text/css" />
+		<link href="css/blue.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.jplayer.js"></script>
+		<script type="text/javascript" src="js/list_text.js"></script>
+		<script type="text/javascript" src="js/lrc.js"></script>
+
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				outline: none;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			.iconfont {
+				color: #ffffff;
+			}
+			
+			ul,
+			ol,
+			dl {
+				list-style: none;
+			}
+			
+			.music_box {
+				margin: 0px auto 0 auto;
+				width: 800px;
+			}
+			
+			.content {
+				width: 800px;
+				height: 560px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.music_img {
+				float: left;
+				width: 244px;
+				height: 244px;
+				border: 3px solid #66678d;
+			}
+			
+			.music_img img {
+				float: left;
+				width: 100%;
+			}
+			
+			#lrc_list {
+				float: left;
+				width: 500px;
+				margin-left: 50px;
+				height: 100%;
+				text-align: left;
+			}
+			
+			#lrc_list li {
+				font: normal 14px/2.1 'microsoft yahei';
+				text-align: left;
+				color: #FFFFFF;
+			}
+			
+			#lrc_list li.hover {
+				color: red;
+				font-weight: bold;
+			}
+		</style>
+
+		<script>
+			//<![CDATA[
+			$(document).ready(function() {
+				
+				var getr = GetRequest().number;
+				var dizhi = geci[getr][1];
+				var data = '';
+				var textt = geci[getr][2].split("[");
+				var lujing=geci[getr][0];
+				$(".music_img img").attr("src","img/"+lujing);
+				$(".list_top").html(dizhi);
+				$(".icon_down_a").attr("href","MP3/"+dizhi+".mp3");
+				
+				$(".icon_down_a").attr("download",dizhi);
+				for(var i = 1; i < textt.length; i++) {
+					data += "[" + textt[i] + "\n"
+
+				}
+				$("#lrc_content").append(data)
+
+				$("#jquery_jplayer_1").jPlayer({
+					ready: function(event) {
+						$(this).jPlayer("setMedia", {
+							mp3: "MP3/" + dizhi + ".mp3", //mp3的播放地址
+							autoPlay: true
+						}).jPlayer('play');
+					},
+					timeupdate: function(event) {
+
+						if(event.jPlayer.status.currentTime == 0) {
+							time = "";
+						} else {
+							time = event.jPlayer.status.currentTime;
+						}
+					},
+					play: function(event) {
+						//点击开始方法调用lrc。start歌词方法 返回时间time
+						$.lrc.start($('#lrc_content').val(), function() {
+							var length = parseInt($("#lrc_list li").length * 29);
+							var margin = parseInt($("#lrc_list").css("margin-top"));
+							if(length + margin <= 0) {
+								$("#lrc_list").removeAttr("margin-top");
+							}
+
+							return time;
+
+						});
+					},
+					ended: function(event) {
+						$("#lrc_list").removeAttr("margin-top");
+					},
+					swfPath: "/js", //存放jplayer.swf的决定路径
+					solution: "html, flash", //支持的页面
+					supplied: "mp3", //支持的音频的格式
+					wmode: "window"
+				});
+
+				function GetRequest() {
+					var url = location.search; //获取url中"?"符后的字串 
+					var theRequest = new Object();
+					if(url.indexOf("?") != -1) {
+						var str = url.substr(1);
+						strs = str.split("&");
+						for(var i = 0; i < strs.length; i++) {
+							theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+						}
+					}
+					return theRequest;
+				}
+			});
+			//]]>
+		</script>
+	</head>
+
+	<body>
+		<textarea id="lrc_content" name="textfield" cols="70" rows="10" style="display:none;"> 
+
+</textarea>
+		<img src="img/bg02.jpg"  style="position: fixed; top: 60px; bottom: 0; left: 0; right: 0; width: 100%;" />
+		<div class="list_top">还要我怎样</div>
+		<div class="music_box">
+			<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+			<div id="jp_container_1" class="jp-audio">
+				<div class="jp-type-single">
+					<div class="jp-gui jp-interface">
+						<ul class="jp-controls">
+							<li class="play_zan">
+								<a href="javascript:;" class="jp-play  iconfont icon-bofang" tabindex="1"></a>
+							</li>
+							<li class="play_zan">
+								<a href="javascript:;" class="jp-pause  iconfont icon-tag35" tabindex="1"></a>
+							</li>
+							<!--<li>
+								<a href="javascript:;" class="jp-stop" tabindex="1">stop</a>
+							</li>-->
+							<li>
+								<a href="javascript:;" class="jp-mute iconfont icon-yinliang" tabindex="1" title="mute"></a>
+							</li>
+							<!--<li>
+								<a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a>
+							</li>-->
+						</ul>
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-volume-bar">
+							<div class="jp-volume-bar-value"></div>
+						</div>
+
+						<div class="jp-time-holder">
+							<div class="jp-current-time"></div><span class="xiegang">/</span>
+							<div class="jp-duration"></div>
+							<!--<ul class="jp-toggles">
+								<li>
+									<a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a>
+								</li>
+							</ul>-->
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<div class="a_box">
+				<a class="icon_down_a" href="MP3/你还要我怎样-艺汀.mp3" download="你还要我怎样-艺汀">
+					<div class="icon_down">
+						<span class="iconfont icon-download"></span>
+					</div>
+				</a>
+			</div>
+			<div class="content">
+
+				<div class="music_img"><img src="" /></div>
+				<ul id="lrc_list">
+					<li>点击开始播放……</li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+
+</html>
